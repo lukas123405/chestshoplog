@@ -1,0 +1,8 @@
+name: chestshoplog
+version: 0.1
+main: me.Inted.chestshoplog.chestshoplog
+author: Inted
+commands:
+     shop:
+          description:
+          usage: /<command>
