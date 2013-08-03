@@ -42,14 +42,9 @@ public class chestshoptransactionlistener implements Listener{
 	MySQL sql = this.plugin.getMySQL();
 	
 	String table = "adminshoplog";
-	if(!event.getSign().getLine(0).equals("AdminShop")){
+	if(!event.getSign().getLine(0).equals("Admin Shop")){
 		table = "usershoplog";
 	}
-	else{
-		if(event.getTransactionType() == TransactionType.BUY){
-			return;
-		}
-	}
-	sql.queryUpdate("INSERT INTO " + table + " (name, menge, preis, transactiontype, shopuser, user, time) VALUES ('" + event.getSign().getLine(3) +  "', '" + amount + "', '" + price + "', '" + event.getTransactionType().name().toLowerCase() + "', '" + event.getSign().getLine(0) + "', '" + event.getClient().getName() + "', '" + tstamp.getTime() + "')");
+	sql.queryUpdate("INSERT INTO " + table + " (name, menge, preis, transactiontype, shopuser, user, time,x,y,z) VALUES ('" + event.getSign().getLine(3) +  "', '" + amount + "', '" + price + "', '" + event.getTransactionType().name().toLowerCase() + "', '" + event.getSign().getLine(0) + "', '" + event.getClient().getName() + "', '" + tstamp.getTime() + "', '" + event.getSign().getX() + "', '" + event.getSign().getY() + "', '" + event.getSign().getZ() + "')");
 	}
 }
