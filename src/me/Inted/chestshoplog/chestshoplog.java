@@ -20,7 +20,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-
+//Blackys Kommentar
 public class chestshoplog extends JavaPlugin{
 
 
